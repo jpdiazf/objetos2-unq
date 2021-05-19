@@ -1,0 +1,29 @@
+Ejercicio 2
+
+s.length() = 3.
+t.length() = error, porque la variable t no está inicializada.
+s.length() = "1abc".
+a.toUpperCase() = "ABC".
+"Libertad".indexOf("r") = 4.
+"Universidad".lastIndexOf('i') = 7.
+"Quilmes".substring(2,4) = "il".
+(a.length() + a).startsWith("a") = false.
+s == a = false.
+a.substring(1,3).equals("bc") = true.
+
+
+Ejercicio 3. Tipos primitivos.
+
+1. Un tipo primitivo es un tipo predefinido por el lenguaje y no comparte estado con otros tipos primitivos.
+   No son objetos creados por una clase.
+2. int es el tipo primitivo, mientras que Integer es la clase con una sola variable de tipo primitivo int.
+   Esta clase provee varios métodos para convertir de int a String y de String a int, entre otros métodos.
+3. En el caso de int es el 0, y en el caso de Integer, null.
+4. En ambos casos da una excepción por no haber inicializado cada variable.
+
+
+Ejercicio 8.
+
+1. No, no conoce este procedimiento. Este mecanismo se llama encapsulamiento.
+
+// PREGUNTAR POR CUADRADO.
