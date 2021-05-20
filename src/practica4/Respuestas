@@ -1,0 +1,6 @@
+1. Las interfaces benefician al polimorfirmo agregando una nueva forma de tipado.
+2. Porque puede provocar incompatibilidades con las variables de instancia de las super clases.
+3. Las clases abstractas pueden tener estado, comportamiento y estructura, mientras que las interfaces solo proveen estructura. Además, las clases se pueden instanciar.
+4. No, no se puede.
+5. PREGUNTAR POR ESTO
+6. Porque es un lenguaje con tipado dinámico.
