@@ -7,7 +7,7 @@ public class ServidorPop implements IServidor {
 
 	public List<Correo> recibirNuevos(String user, String pass) {
 		List<Correo> retorno = new ArrayList<Correo>();
-	  //Verificar autenticidad de usuario.
+	    //Verificar autenticidad de usuario.
 		//obtener emails Nuevos del usuario.
 		//asignar a retorno la lista de los nuevos e-mails.
 		return retorno;
@@ -36,9 +36,5 @@ public class ServidorPop implements IServidor {
 	@Override
 	public void realizarBackUp() {
 		//no corresponde
-		
 	}
-
-
-
 }
