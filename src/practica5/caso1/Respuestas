@@ -1,0 +1,6 @@
+2. Se rompe el Single Responsibility Principle con el ClienteEMail, ya que tiene muchas responsabilidades.
+   Se viola el Liskov Substitution Principle, enviando mensajes al ServidorPop en vez de tipar con la iInterfaz IServidor.
+   Por último, no se respeta al Interface Segragation Principle, ya que el ServidorPop, al implementar la interfaz IServidor,
+   adquiere un protocolo del cual varios métodos no los va a utilizar.
+3. Hay que repartir las responsabilidades de la clase ClienteEMail. Hay que tipar con la interfaz IServidor. Por último,
+   se tiene que crear una nueva interfaz para que IServidor no esté tan sobrecargada. 
