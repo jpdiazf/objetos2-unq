@@ -4,3 +4,64 @@
 4. No, no se puede.
 5. PREGUNTAR POR ESTO
 6. Porque es un lenguaje con tipado dinámico.
+
+
+Interfaces y colecciones:
+
+public class ColeccionadorDeObjetos {
+    
+    // 1
+    public Object getFirstFrom(XXX collection) {
+        return collection.get(0)
+    }
+    
+    // 2
+    public void addLast(Object element, YYY collection) {
+        collection.add(element)
+    }
+    
+    // 3
+    public Collection getSubCollection(ZZZ collection, int from, int to) {
+        return collection.sublist(x, y)
+    }
+    
+    // 4
+    public Boolean containsElement(WWW collection, Object element) {
+        return collection.contains(element)
+    }
+}
+
+Interface Collection:
+1: Rompe. La interfaz Collection no implementa get(n).
+2: Agrega el elemento a la colección.
+3. Rompe. La interfaz Collection no implementa sublist(x, y).
+4. Retorna un booleano que indica si el elemento pertenece o no a la colección.
+
+Interface List:
+1: Devuelve el elemento en el índice dado o rompe si el mismo está fuera de rango.
+2: Agrega el elemento al final de la lista.
+3. Retorna una porción desde el índice dado, inclusive, hasta el índice dado, exclusivo.
+4. Retorna un booleano que indica si el elemento pertenece o no a la lista.
+
+Class ArrayList:
+1: Devuelve el elemento en el índice dado o rompe si el mismo está fuera de rango.
+2: Agrega el elemento al final del ArrayList.
+3. Retorna una porción desde el índice dado, inclusive, hasta el índice dado, exclusivo.
+4. Retorna un booleano que indica si el elemento pertenece o no al ArrayList.
+
+Class LinkedList:
+1: Devuelve el elemento en el índice dado o rompe si el mismo está fuera de rango.
+2: Agrega el elemento al final de la LinkedList.
+3. Retorna una porción desde el índice dado, inclusive, hasta el índice dado, exclusivo. (Implementado en una superclass).
+4. Retorna un booleano que indica si el elemento pertenece o no a la LinkedList.
+
+
+
+
+
+
+
+
+
+
+
