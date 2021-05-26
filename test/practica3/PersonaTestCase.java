@@ -14,7 +14,7 @@ class PersonaTestCase {
 	@BeforeEach
 	public void setUp() {
 		carlos = new Persona("Carlos", LocalDate.of(1990, 5, 15));
-		guillermina = new Persona("Guillermina", LocalDate.of(1990, 5, 25));
+		guillermina = new Persona("Guillermina", LocalDate.of(1990, 5, 30));
 	}
 	
 	@Test

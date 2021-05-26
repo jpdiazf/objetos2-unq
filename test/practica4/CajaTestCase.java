@@ -32,6 +32,7 @@ class CajaTestCase {
 		
 		assertEquals(99, productoTrad.getStock());
 		assertEquals(148, productoCoop.getStock());
+		
 	}
 	
 	@Test

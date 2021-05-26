@@ -1,0 +1,4 @@
+Mockito
+
+2. Esto se indica mediante el uso del método estático 
+   when(objMockeado.metodo(args...)).thenReturn(expresion)
