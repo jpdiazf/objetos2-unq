@@ -3,11 +3,15 @@ package practica6;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class PokerStatusTesCase3 {
-	PokerStatus3 pokerStatus;	
+class PokerStatusTestCase {
+	PokerStatus pokerStatus;	
 	Carta unoP;
 	Carta dosP;
 	Carta tresP;
@@ -19,7 +23,7 @@ class PokerStatusTesCase3 {
 	
 	@BeforeEach
 	public void setUp() throws Exception {
-		pokerStatus = new PokerStatus3();
+		pokerStatus = new PokerStatus();
 		unoP = mock(Carta.class);
 		dosP = mock(Carta.class);
 		tresP = mock(Carta.class);
@@ -93,4 +97,45 @@ class PokerStatusTesCase3 {
 		// Verify
 		assertEquals("Color", jugada);
 	}
+	
+	@Test
+	void testGanaManoUnoConPokerAManoDosConColor() {
+		List<Carta> manoConPoker = new ArrayList<Carta>(Arrays.asList(unoP, unoP, unoC, unoT, cuatroP));
+		List<Carta> manoConColor = new ArrayList<Carta>(Arrays.asList(unoP, dosP, cincoP, tresP, cuatroP));
+		
+		String resultado = pokerStatus.resultadoMano(unoP, unoP, unoC, unoT, cuatroP, unoP, dosP, cincoP, tresP, cuatroP);
+		
+		assertEquals("Gana la mano 1 con poker", resultado);
+	}
+	
+//	@Test
+//	void testGanaManoDosConPokerAManoUnoConColor() {
+//		String jugadaConPoker = pokerStatus.verificar(unoP, unoP, unoC, unoT, cuatroP);
+//		String jugadaConColor = pokerStatus.verificar(unoP, unoP, unoC, unoT, cuatroP);
+//		String resultado = pokerStatus.resultadoMano(jugadaConPoker, jugadaConColor);
+//		
+//		assertEquals("Gana la mano 1 con poker", resultado);				
+//	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
