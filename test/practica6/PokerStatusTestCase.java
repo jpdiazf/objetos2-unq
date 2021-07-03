@@ -98,15 +98,15 @@ class PokerStatusTestCase {
 		assertEquals("Color", jugada);
 	}
 	
-	@Test
-	void testGanaManoUnoConPokerAManoDosConColor() {
-		List<Carta> manoConPoker = new ArrayList<Carta>(Arrays.asList(unoP, unoP, unoC, unoT, cuatroP));
-		List<Carta> manoConColor = new ArrayList<Carta>(Arrays.asList(unoP, dosP, cincoP, tresP, cuatroP));
-		
-		String resultado = pokerStatus.resultadoMano(unoP, unoP, unoC, unoT, cuatroP, unoP, dosP, cincoP, tresP, cuatroP);
-		
-		assertEquals("Gana la mano 1 con poker", resultado);
-	}
+//	@Test
+//	void testGanaManoUnoConPokerAManoDosConColor() {
+//		List<Carta> manoConPoker = new ArrayList<Carta>(Arrays.asList(unoP, unoP, unoC, unoT, cuatroP));
+//		List<Carta> manoConColor = new ArrayList<Carta>(Arrays.asList(unoP, dosP, cincoP, tresP, cuatroP));
+//		
+//		String resultado = pokerStatus.resultadoMano(unoP, unoP, unoC, unoT, cuatroP, unoP, dosP, cincoP, tresP, cuatroP);
+//		
+//		assertEquals("Gana la mano 1 con poker", resultado);
+//	}
 	
 //	@Test
 //	void testGanaManoDosConPokerAManoUnoConColor() {
