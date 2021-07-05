@@ -1,4 +1,42 @@
-Mockito
+Explique y desarrolle el significado de los siguientes postulados de TDD y Test de Unidad.
+Mantener en forma exhaustiva una suite de tests.
+	Se debe tener una gran batería de tests que abarque toda la funcionalidad pública de una clase.
+
+No deben utilizarse para testear otros objetos del dominio.
+	Esto significa que cada test debe enfocarse en el dominio al que desea testear y no intervenir en otros,
+	desligándose de las dependencias externas.
+
+Comunicar la intención del test.
+	Cada test tiene como función poner a prueba funcionalidad unitaria. Se requiere claridad a la hora de realizarlos
+	para entender qué están comunicando.
+
+------------------------------------------
+
+Test Doubles
+¿Qué son los test doubles?
+	Son tests donde se simula la instancia de clases que pertenecen al DOM.
+
+Enumere los tipos de test doubles y dé ejemplos concretos de uso. Indique como usaría, cuando es posible,
+mockito para emular los diferentes tipos de tipos de test doubles.
+	
+	Dummy object
+   		Un objeto que no recibe ni envía mensajes, solo está. Ej: [Dummy].
+   		Mockito: ClassMock varMock =  mock(ClassMock.class);
+
+	Test stub 
+		Un objeto utilizado para devolver ciertas respuestas a los mensajes recibidos.
+		Ej: devolver la edad de un Empleado, donde el SUT es la Empresa.
+		Mockito: when(varMock.methodCall()).thenReturn(value);
+
+   	Mock object
+   		Un objeto al cual se le pueden consultar los mensajes recibidos.
+   		Ej: Que el mock Pantalla haya recibido el mensaje visualizar(var) desde el SUT; siendo var un objeto cualquiera.
+   		Mockito: verify(varMock).methodCall();
+
+	Test spy 
+		Un objeto que monitorea los mensajes enviados a otro. Tiene el comportamiento del objecto original pero se le pueden 
+		realizar consultas como si fuese un mock.
+		Mockito: ClassMock varMock =  spy(ClassMock.class);  
 
 2. Esto se indica mediante el uso del método estático 
-   when(objMockeado.metodo(args...)).thenReturn(expresion)
+   when(mockedObj.method(...)).thenReturn(expresion)
